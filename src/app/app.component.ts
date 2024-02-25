@@ -17,7 +17,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   value: string = "";
-  onEntryKey() {
+  onEnterKey() {
     console.log(this.value)
   }
 }
