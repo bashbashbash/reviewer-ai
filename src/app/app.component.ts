@@ -31,4 +31,5 @@ export class AppComponent {
   }
   showMessage = () => {
     notify("The button was clicked");
+  }
 }
