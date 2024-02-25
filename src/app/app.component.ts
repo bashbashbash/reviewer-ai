@@ -2,19 +2,17 @@ import { Component, Input } from '@angular/core';
 import notify from 'devextreme/ui/notify';
 
 @Component({
-  selector: 'AppComponent',
+  selector: ''app-root',
   template: `
   <div>
     <input type="text" [(ngModel)]="userInput" placeholder="Enter your text">
       <button (click)="submit()">
         Submit
       </button>
-  </div>',
+  </div>`,
 })
 export class AppComponent {
   userInput: string = '';
-
-  constructor() { }
 
   submit() {
     // Handle submission logic here, for example:
