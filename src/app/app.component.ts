@@ -10,14 +10,15 @@ import { Component } from '@angular/core';
         labelMode="floating"
         [maxLength]="20"
         [showClearButton]="true"
-        (onEnterKey)="onEnterKey()"
+        (onChange)="onChange()"
     >
     </dx-text-box>
 </div>`,
 })
 export class AppComponent {
   value: string = "";
-  onEnterKey() {
+  onChange() {
+    string = this.value
     console.log(this.value)
   }
 }
