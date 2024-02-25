@@ -16,9 +16,9 @@ import { Component } from '@angular/core';
 </div>`,
 })
 export class AppComponent {
+  @Input()
   value: string = "";
   onChange() {
-    string = this.value
     console.log(this.value)
   }
 }
