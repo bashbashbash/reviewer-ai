@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
     <dx-text-box 
         [(value)]="value"
         mode="url"
-        label="Link"
+        label="Enter Prompt"
         labelMode="floating"
         [maxLength]="20"
         [showClearButton]="true"
