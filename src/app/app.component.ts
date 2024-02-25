@@ -3,33 +3,22 @@ import notify from 'devextreme/ui/notify';
 
 @Component({
   selector: 'app-root',
-  template: `<div id="container">
-    <dx-text-box 
-        [(value)]="value"
-        mode="url"
-        label="Enter Prompt"
-        labelMode="floating"
-        [maxLength]="20"
-        [showClearButton]="true"
-        (onChange)="onChange()"
-    >
-    </dx-text-box>
-    <dx-button
-      text="Click me!"
-      (onClick)="showMessage()"
-      stylingMode="outlined"
-      type="success"
-      icon="comment">
-    </dx-button>
-</div>`,
+  template: `
+  <div>
+    <input type="text" [(ngModel)]="userInput" placeholder="Enter your text">
+      <button (click)="submit()">
+        Submit
+      </button>
+  </div>',
 })
 export class AppComponent {
-  @Input()
-  value: string = "";
-  onChange() {
-    console.log(this.value)
-  }
-  showMessage = () => {
-    notify("The button was clicked");
+  userInput: string = '';
+
+  constructor() { }
+
+  submit() {
+    // Handle submission logic here, for example:
+    console.log('User input:', this.userInput);
+    // You can send this data to a service or perform any other actions
   }
 }
