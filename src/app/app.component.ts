@@ -13,6 +13,13 @@ import { Component, Input } from '@angular/core';
         (onChange)="onChange()"
     >
     </dx-text-box>
+    <dx-button
+      text="Click me!"
+      (onClick)="showMessage()"
+      stylingMode="outlined"
+      type="success"
+      icon="comment">
+    </dx-button>
 </div>`,
 })
 export class AppComponent {
@@ -21,4 +28,6 @@ export class AppComponent {
   onChange() {
     console.log(this.value)
   }
+  showMessage = () => {
+    notify("The button was clicked");
 }
