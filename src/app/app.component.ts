@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import notify from 'devextreme/ui/notify';
 
 @Component({
-  selector: ''app-root',
+  selector: 'app-root',
   template: `
   <div>
     <input type="text" [(ngModel)]="userInput" placeholder="Enter your text">
