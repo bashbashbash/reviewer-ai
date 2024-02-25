@@ -5,7 +5,7 @@ import notify from 'devextreme/ui/notify';
   selector: 'app-root',
   template: `
   <div>
-    <input type="text" [(ngModel)]="userInput" placeholder="Enter your text">
+    <input type="text" [(NgModule)]="userInput" placeholder="Enter your text">
       <button (click)="submit()">
         Submit
       </button>
