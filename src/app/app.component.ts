@@ -27,10 +27,7 @@ export class AppComponent {
     }
  
     handleSubmit = function(e) {
-        onClick(() => { 
-            alert("Submitted");          
-        }, 1000);
- 
+        alert("Submitted");          
         e.preventDefault();
     }
 }
