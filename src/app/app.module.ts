@@ -1,15 +1,14 @@
 import { BrowserModule } from "@angular/platform-browser";
-import { FormsModule } from '@angular/forms';
 import { NgModule } from "@angular/core";
 
 import { HttpClientModule} from '@angular/common/http';
-import { DxTextBoxModule, DxButtonModule } from 'devextreme-angular';
+import { DxFormModule} from 'devextreme-angular';
 
 import { AppComponent } from "./app.component";
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, HttpClientModule, DxTextBoxModule, DxButtonModule, FormsModule],
+  imports: [BrowserModule, HttpClientModule, DxFormModule],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
