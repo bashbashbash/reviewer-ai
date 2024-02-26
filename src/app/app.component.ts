@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import notify from 'devextreme/ui/notify';
+import { DxTextBoxModule } from 'devextreme-angular';
 
 @Component({
   selector: 'app-root',
