@@ -5,7 +5,7 @@ import notify from 'devextreme/ui/notify';
   selector: 'app-root',
   template: `
     <dx-form
-        [formData]="prompt-submit"
+        [formData]="prompt_submit"
         [colCount]="2">
         <dxi-item dataField="prompt"></dxi-item>
         <dxi-item 
@@ -16,7 +16,19 @@ import notify from 'devextreme/ui/notify';
   `,
 })
 export class AppComponent {
-    employee = {
+    prompt_submit = {
         prompt: 'Enter a prompt'
+    }
+    submitButtonOptions = {
+        text: "Submit the Form",
+        useSubmitBehavior: true
+    }
+ 
+    handleSubmit = function(e) {
+        setTimeout(() => { 
+            alert("Submitted");          
+        }, 1000);
+ 
+        e.preventDefault();
     }
 }
