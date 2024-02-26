@@ -18,9 +18,6 @@ import notify from 'devextreme/ui/notify';
   `,
 })
 export class AppComponent {
-    prompt_submit = {
-        prompt: 'Enter a prompt'
-    }
     submitButtonOptions = {
         text: "Submit",
         useSubmitBehavior: true
