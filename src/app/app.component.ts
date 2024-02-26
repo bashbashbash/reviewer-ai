@@ -8,7 +8,7 @@ import notify from 'devextreme/ui/notify';
       <dx-form
           [formData]="prompt_submit"
           [colCount]="2">
-          <dxi-item dataField="prompt"></dxi-item>
+          <dxi-item dataField="prompt" placeholder="Enter full name here..."></dxi-item>
           <dxi-item 
               itemType="button"
               [buttonOptions]="submitButtonOptions">
