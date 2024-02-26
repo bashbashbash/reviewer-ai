@@ -4,19 +4,26 @@ import notify from 'devextreme/ui/notify';
 @Component({
   selector: 'app-root',
   template: `
-  <div>
-    <input type="text" [(ngmodel)]="userInput" placeholder="Enter your text">
-      <button (click)="submit()">
-        Submit
-      </button>
-  </div>`,
+    <dx-form
+        [formData]="employee"
+        [colCount]="2">
+        <dxi-item dataField="name"></dxi-item>
+        <dxi-item dataField="position"></dxi-item>
+        <dxi-item dataField="hireDate"></dxi-item>
+        <dxi-item dataField="officeNumber"></dxi-item>
+        <dxi-item 
+            dataField="notes" 
+            [colSpan]="2">
+        </dxi-item>
+    </dx-form>
+  `,
 })
 export class AppComponent {
-  userInput: string = '';
-
-  submit() {
-    // Handle submission logic here, for example:
-    console.log('User input:', this.userInput);
-    // You can send this data to a service or perform any other actions
-  }
+    employee = {
+        name: 'John Heart',
+        position: 'CEO',
+        hireDate: new Date(2012, 4, 13),
+        officeNumber: 901,
+        notes: 'John has been in the Audio/Video industry since 1990.'
+    }
 }
