@@ -18,13 +18,14 @@ import notify from 'devextreme/ui/notify';
   `,
 })
 export class AppComponent {
-    submitButtonOptions = {
-        text: "Submit",
-        useSubmitBehavior: true
-    }
- 
-    handleSubmit = function(e) {
-        alert("Submitted");          
-        e.preventDefault();
-    }
+  prompt_submit = {}
+  submitButtonOptions = {
+      text: "Submit",
+      useSubmitBehavior: true
+  }
+
+  handleSubmit = function(e) {
+      alert("Submitted");          
+      e.preventDefault();
+  }
 }
